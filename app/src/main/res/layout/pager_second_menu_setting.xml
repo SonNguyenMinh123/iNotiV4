@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/rll_pager_second_menu_setting_control_brightness"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:id="@+id/btn_pager_second_menu_setting__ok_brighness"
+            android:src="@drawable/bg_button_all_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <SeekBar
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btn_pager_second_menu_setting__ok_brighness"
+            android:id="@+id/seekBar_pager_second_menu_setting__brightness"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:maxHeight="3dip"
+            android:minHeight="3dip"
+            android:progressDrawable="@drawable/green_progress"
+            android:thumbTint="@color/green"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lnl_pager_second_menu_setting__control"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="5"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:background="@android:color/transparent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/ic_switch_pager_second_menu_setting_rotation_disabled"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_rotation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/ic_switch_pager_second_menu_setting_rotation_airplane"
+            android:background="@android:color/transparent"
+            android:src="@drawable/bg_button_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/ic_switch_pager_second_menu_setting_batery_saver"
+            android:background="@android:color/transparent"
+            android:src="@drawable/bg_button_battery_saver"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/ic_switch_pager_second_menu_setting_manager_app"
+            android:background="@android:color/transparent"
+            android:src="@drawable/bg_brightness"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/ic_switch_pager_second_menu_setting_mode_airplane"
+            android:background="@android:color/transparent"
+            android:src="@drawable/bg_button_airplane"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

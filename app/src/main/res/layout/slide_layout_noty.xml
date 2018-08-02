@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.notification.notyos10.customviews.slide.NotifyLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_marginRight="@dimen/_20sdp"
+        android:id="@+id/rl_partial_noty_close_button"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp">
+        <com.notification.notyos10.customviews.closebutton.CloseButton
+            android:id="@+id/close_button_partial_noty"
+            android:layout_alignParentRight="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            app:text_close="X"
+            app:text_opend = "Clear"
+            app:size_button = "50"
+            >
+        </com.notification.notyos10.customviews.closebutton.CloseButton>
+    </RelativeLayout>
+    <com.notification.notyos10.swipemenulistview.SwipeMenuListView
+        android:layout_below="@id/rl_partial_noty_close_button"
+        android:id="@+id/ltv_partial_noty"
+        android:layout_width="match_parent"
+        android:dividerHeight="@dimen/_5sdp"
+        android:divider="@android:color/transparent"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_height="match_parent"/>
+    <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+        android:id="@+id/txv_partial_noty__empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Notifications"
+        android:textColor="@color/color_text_blue"
+        android:textSize="@dimen/_24sdp"/>
+</com.notification.notyos10.customviews.slide.NotifyLayout>

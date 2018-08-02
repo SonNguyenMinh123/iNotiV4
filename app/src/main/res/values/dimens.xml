@@ -3,5 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="shadow_height">3dp</dimen>
-    <dimen name="physics_layout_dp_per_meter">50dp</dimen>
+    <dimen name="physics_layout_dp_per_meter">49dp</dimen>
 </resources>

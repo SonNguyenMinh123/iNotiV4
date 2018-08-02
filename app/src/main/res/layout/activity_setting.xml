@@ -4,25 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#E0F2F1"
-    tools:context=".widgets.SettingActivity">
-
-    <TextView
+    tools:context=".activitys.SettingNotyActivity">
+    <com.notification.notyos10.customviews.widgets.TextViewOSNormal
         android:id="@+id/txv_activity_setting__settings"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:background="@android:color/background_light"
         android:gravity="center"
-        android:text="Notify Setting"
+        android:text="@string/title_settings"
         android:textColor="@android:color/background_dark"
-        android:textSize="@dimen/_19sdp"
-        android:textStyle="bold"
-        />
+        android:textSize="@dimen/_19sdp"/>
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/txv_activity_setting__settings">
 
         <LinearLayout
@@ -32,19 +34,19 @@
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="@dimen/_2sdp"
+                android:layout_height="@dimen/_1sdp"
                 android:background="@color/line"/>
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="@dimen/_30sdp"
-                >
-
-            </TextView>
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1.0dip"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@color/color_background">
+
+            </View>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.3dip"
                 android:background="@color/line"/>
 
             <RelativeLayout
@@ -53,17 +55,17 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_pressed_color_item_main">
 
-
-                <TextView
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@+id/icon_turn_on_notify"
                     android:paddingBottom="11dp"
                     android:paddingTop="11dp"
-                    android:text="Turn On/Off Notify"
+                    android:text="@string/turn_inotify"
                     android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
+                    android:textSize="@dimen/_13sdp"/>
 
                 <ImageView
                     android:layout_width="20dp"
@@ -73,25 +75,35 @@
                     android:layout_marginRight="10dp"
                     android:src="@drawable/ic_chevron_right"/>
 
+                <ImageView
+                    android:id="@+id/icon_turn_on_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_enable"/>
+
             </RelativeLayout>
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1.0dip"
+                android:layout_height="0.3dip"
                 android:background="@color/line"/>
 
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/_30sdp"
+                android:background="@color/color_background"
                 >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
                     android:layout_centerVertical="true"
                     android:paddingLeft="10dp"
-                    android:text="Personalization"
+                    android:text="@string/_persional"
                     android:textColor="#000000"
                     android:textSize="@dimen/_12sdp"/>
 
@@ -99,7 +111,7 @@
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1.0dip"
+                android:layout_height="0.3dip"
                 android:background="@color/black50"/>
 
             <RelativeLayout
@@ -108,6 +120,14 @@
                 android:background="@android:color/white"
                 android:paddingTop="5.0dip">
 
+                <ImageView
+                    android:id="@+id/icon_show_statusbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_show2"/>
 
                 <com.sevenheaven.iosswitch.ShSwitchView
                     xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
@@ -118,30 +138,29 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/_5sdp"
                     shSwitch:shadowSpace="7dip"
-                    shSwitch:tintColor="#1E88E5"
+                    shSwitch:tintColor="@color/onclor"
                     />
 
                 <View
                     android:layout_width="fill_parent"
-                    android:layout_height="1.0dip"
+                    android:layout_height="0.3dip"
                     android:layout_alignLeft="@+id/txv_activity_setting__statusbar"
                     android:layout_alignParentBottom="true"
-                    android:background="@color/black20"
-                    android:layout_marginRight="@dimen/_10sdp"/>
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:background="@color/black20"/>
 
-                <TextView
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
                     android:id="@+id/txv_activity_setting__statusbar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
                     android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/icon_show_statusbar"
                     android:paddingBottom="11dp"
                     android:paddingTop="11dp"
-                    android:text="Show Statusbar"
+                    android:text="@string/show_status_bar"
                     android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
+                    android:textSize="@dimen/_13sdp"/>
 
             </RelativeLayout>
 
@@ -149,177 +168,85 @@
                 android:id="@+id/view_activity_setting__color_statusbar"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="5.0dip"
-                android:background="@drawable/bg_pressed_color_item_main">
+                android:background="@drawable/bg_pressed_color_item_main"
+                android:paddingTop="5.0dip">
 
                 <ImageView
-
-                    android:id="@+id/show_activity_setting__color_statusbar"
-                    android:layout_width="@dimen/_53sdp"
-                    android:layout_height="@dimen/_38sdp"
-                    android:scaleType="fitXY"
-                    android:layout_alignParentRight="true"
+                    android:id="@+id/icon_change_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="@dimen/_5sdp"
-                    android:text="Color"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_10sdp"
-                    android:src="@drawable/img_check_color"
-                    android:background="@drawable/bgr_blue"
-                   />
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_color"/>
 
                 <View
                     android:layout_width="fill_parent"
-                    android:layout_height="1.0dip"
+                    android:layout_height="0.3dip"
                     android:layout_alignLeft="@+id/txv_activity_setting__color_statusbar"
                     android:layout_alignParentBottom="true"
-                    android:background="@color/black20"
-                    android:layout_marginRight="@dimen/_10sdp"/>
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:background="@color/black20"/>
 
-                <TextView
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
                     android:id="@+id/txv_activity_setting__color_statusbar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
                     android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/icon_change_color"
                     android:paddingBottom="11dp"
                     android:paddingTop="11dp"
-                    android:text="Color Statusbar"
+                    android:text="@string/color_statusbar"
                     android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
-
-            </RelativeLayout>
-
-
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:paddingTop="5.0dip">
-
-
-                <com.sevenheaven.iosswitch.ShSwitchView
-                    xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/swv_activity_setting__menu_setting"
-                    android:layout_width="62dip"
-                    android:layout_height="41dip"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-
-                    android:layout_marginRight="@dimen/_5sdp"
-                    shSwitch:shadowSpace="7dip"
-                    shSwitch:tintColor="#1E88E5"/>
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1.0dip"
-                    android:layout_alignLeft="@+id/txv_activity_setting__menu_setting"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/black20"
-                    android:layout_marginRight="@dimen/_10sdp"/>
-
-                <TextView
-                    android:id="@+id/txv_activity_setting__menu_setting"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="10.0dip"
-                    android:paddingBottom="11dp"
-                    android:paddingTop="11dp"
-                    android:text="Show menu settings"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
+                    android:textSize="@dimen/_13sdp"/>
 
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/view_activity_setting__background"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
+                android:background="@drawable/bg_pressed_color_item_main"
                 android:paddingTop="5.0dip">
 
-
-                <com.sevenheaven.iosswitch.ShSwitchView
-                    xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/swv_activity_setting__signal_strength"
-                    android:layout_width="62dip"
-                    android:layout_height="41dip"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-
-                    android:layout_marginRight="@dimen/_5sdp"
-                    shSwitch:shadowSpace="7dip"
-                    shSwitch:tintColor="#1E88E5"/>
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1.0dip"
-                    android:layout_alignLeft="@+id/txv_activity_setting__signal_strength"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/black20"
-                    android:layout_marginRight="@dimen/_10sdp"/>
-
-                <TextView
-                    android:id="@+id/txv_activity_setting__signal_strength"
+                <ImageView
+                    android:id="@+id/icon_change_background"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="10.0dip"
-                    android:paddingBottom="11dp"
-                    android:paddingTop="11dp"
-                    android:text="Show signal strength"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/rll_activity_setting_battery"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:paddingTop="5.0dip">
-
-                <TextView
-                    android:id="@+id/txv_activity_setting__battery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="10.0dip"
-                    android:paddingBottom="11dp"
-                    android:paddingTop="11dp"
-                    android:text="Show battery percentage"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_changewall"/>
 
-
-                <com.sevenheaven.iosswitch.ShSwitchView
-                    xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="62dip"
-                    android:layout_height="41dip"
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:id="@+id/swv_activity_setting__battery"
-                    shSwitch:shadowSpace="7dip"
-                    shSwitch:tintColor="#1E88E5"
-                    android:layout_marginRight="@dimen/_5sdp"
-                    />
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right"/>
 
                 <View
                     android:layout_width="fill_parent"
-                    android:layout_height="1.0dip"
-                    android:layout_alignLeft="@+id/txv_activity_setting__battery"
+                    android:layout_height="0.3dip"
+                    android:layout_alignLeft="@+id/txv_activity_setting__background"
                     android:layout_alignParentBottom="true"
-                    android:background="@color/black20"
-                    android:layout_marginRight="@dimen/_10sdp"/>
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:background="@color/black20"/>
+
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                    android:id="@+id/txv_activity_setting__background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/icon_change_background"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/change_background_notify"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp"/>
 
             </RelativeLayout>
 
@@ -329,18 +256,27 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_pressed_color_item_main">
 
+                <ImageView
+                    android:id="@+id/icon_clock_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_dateformat"/>
 
-                <TextView
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
                     android:id="@+id/txv_activity_setting__clock_format"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/icon_clock_format"
                     android:paddingBottom="11dp"
                     android:paddingTop="11dp"
-                    android:text="Clock Format"
+                    android:text="@string/clock_format"
                     android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
+                    android:textSize="@dimen/_13sdp"/>
 
                 <TextView
                     android:id="@+id/txv_activity_setting__clock_format_type"
@@ -350,7 +286,7 @@
                     android:layout_toLeftOf="@+id/imv_activity_setting__clock_format"
                     android:text="12:08 PM"
                     android:textColor="#a7a7a7"
-                    android:textSize="@dimen/_13sdp"/>
+                    android:textSize="@dimen/_11sdp"/>
 
                 <ImageView
                     android:id="@+id/imv_activity_setting__clock_format"
@@ -365,20 +301,22 @@
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1.0dip"
+                android:layout_height="0.3dip"
                 android:background="@color/line"/>
 
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/_30sdp"
+                android:background="@color/color_background"
                 >
 
             </RelativeLayout>
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1.0dip"
+                android:layout_height="0.3dip"
                 android:background="@color/line"/>
+
 
             <RelativeLayout
                 android:id="@+id/rll_activity_setting__carier_name"
@@ -387,18 +325,27 @@
                 android:background="@android:color/white"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <ImageView
+                    android:id="@+id/icon_show_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_showname"/>
+
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
                     android:id="@+id/txv_activity_setting__carrier_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/icon_show_name"
                     android:paddingBottom="11dp"
                     android:paddingTop="11dp"
-                    android:text="Show carrier's name"
+                    android:text="@string/show_name"
                     android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
-
+                    android:textSize="@dimen/_13sdp"/>
 
                 <com.sevenheaven.iosswitch.ShSwitchView
                     xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
@@ -409,73 +356,44 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/_5sdp"
                     shSwitch:shadowSpace="7dip"
-                    shSwitch:tintColor="#1E88E5"/>
+                    shSwitch:tintColor="@color/onclor"/>
 
                 <View
                     android:layout_width="fill_parent"
-                    android:layout_height="1.0dip"
+                    android:layout_height="0.3dip"
                     android:layout_alignLeft="@+id/txv_activity_setting__carrier_name"
                     android:layout_alignParentBottom="true"
-                    android:background="@color/black20"
-                    android:layout_marginRight="@dimen/_10sdp"/>
-
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/view_activity_setting__background"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="5.0dip"
-                android:background="@drawable/bg_pressed_color_item_main">
-
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_chevron_right"/>
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1.0dip"
-                    android:layout_alignLeft="@+id/txv_activity_setting__background"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_7sdp"
                     android:background="@color/black20"/>
 
-                <TextView
-                    android:id="@+id/txv_activity_setting__background"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="10.0dip"
-                    android:paddingBottom="11dp"
-                    android:paddingTop="11dp"
-                    android:text="Change Background Notify"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
-
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rll_activity_setting__custom_carier_name"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_pressed_color_item_main">
 
+                <ImageView
+                    android:id="@+id/icon_custom_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_sharefriend"/>
 
-                <TextView
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/icon_custom_name"
                     android:paddingBottom="11dp"
                     android:paddingTop="11dp"
-                    android:text="Customize carrier's name"
+                    android:text="@string/custom_name"
                     android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
+                    android:textSize="@dimen/_13sdp"/>
 
                 <ImageView
                     android:layout_width="20dp"
@@ -489,19 +407,177 @@
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1.0dip"
+                android:layout_height="0.3dip"
+                android:layout_alignLeft="@+id/txv_activity_setting__carrier_name"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:background="@color/black20"/>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_setting_weather"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_color_item_main"
+                android:paddingTop="5.0dip">
+
+                <ImageView
+                    android:id="@+id/img_30"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_weather"/>
+
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                    android:id="@+id/txv_activity_setting_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@+id/img_30"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="Weather Setting"
+                    android:textColor="#000000"
+                    android:textSize="17sp"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.3dip"
+                android:layout_alignLeft="@+id/txv_activity_setting__carrier_name"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:background="@color/black20"/>
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingTop="5.0dip">
+
+                <ImageView
+                    android:id="@+id/icon_signal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_signal"/>
+
+                <com.sevenheaven.iosswitch.ShSwitchView
+                    xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/swv_activity_setting__signal_strength"
+                    android:layout_width="62dip"
+                    android:layout_height="41dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    shSwitch:shadowSpace="7dip"
+                    shSwitch:tintColor="@color/onclor"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.3dip"
+                    android:layout_alignLeft="@+id/txv_activity_setting__signal_strength"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:background="@color/black20"/>
+
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                    android:id="@+id/txv_activity_setting__signal_strength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/icon_signal"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/show_signal_strength"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_setting_battery"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingTop="5.0dip">
+
+
+                <ImageView
+                    android:id="@+id/icon_percent_battery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_percent_battery"/>
+
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                    android:id="@+id/txv_activity_setting__battery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/icon_percent_battery"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/show_battery_percent"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp"/>
+
+
+                <com.sevenheaven.iosswitch.ShSwitchView
+                    xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/swv_activity_setting__battery"
+                    android:layout_width="62dip"
+                    android:layout_height="41dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    shSwitch:shadowSpace="7dip"
+                    shSwitch:tintColor="@color/onclor"
+                    />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.3dip"
+                    android:layout_alignLeft="@+id/txv_activity_setting__battery"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:background="@color/black20"/>
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.3dip"
                 android:background="@color/line"/>
 
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/_30sdp"
+                android:background="@color/color_background"
                 >
 
             </RelativeLayout>
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1.0dip"
+                android:layout_height="0.3dip"
                 android:background="@color/line"/>
 
             <RelativeLayout
@@ -510,29 +586,80 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_pressed_color_item_main">
 
+                <ImageView
+                    android:id="@+id/icon_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_rateus"/>
 
-                <TextView
+
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/icon_rate"
+                    android:paddingBottom="11dp"
+                    android:paddingTop="11dp"
+                    android:text="@string/rate_app"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_13sdp"/>
+
+                <!--<ImageView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:src="@drawable/ic_rateus"/>-->
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.3dip"
+                android:background="@color/line"/>
+
+            <RelativeLayout
+                android:id="@+id/rll_activity_setting__privacy_policy"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pressed_color_item_main">
+
+                <ImageView
+                    android:id="@+id/icon_privacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:src="@drawable/ic_privacy"/>
+
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10.0dip"
                     android:paddingBottom="11dp"
                     android:paddingTop="11dp"
-                    android:text="Rate app"
+                    android:text="Privacy Policy"
+                    android:layout_toRightOf="@id/icon_privacy"
                     android:textColor="#000000"
-                    android:textSize="@dimen/_15sdp"/>
+                    android:textSize="@dimen/_13sdp"/>
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_rateus"/>
+                <!--<ImageView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:src="@drawable/ic_rateus"/>-->
 
             </RelativeLayout>
 
         </LinearLayout>
     </ScrollView>
-
 </RelativeLayout>

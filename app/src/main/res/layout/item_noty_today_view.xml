@@ -19,14 +19,24 @@
             android:padding="5dp"
             android:src="@drawable/ic_small_calendar" />
 
-        <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSNormal
+        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
             android:id="@+id/txv_item_noty_today_view__title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="40dp"
-            android:text=""
+            android:text="hhhhh"
             android:textColor="@android:color/background_light" />
+
+        <ImageButton
+            android:id="@+id/btn_item_noty_today_view_close"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/bg_pressed_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <View
             android:id="@+id/view_item_noty_today_view"
@@ -34,6 +44,4 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/txv_item_noty_today_view__title" />
     </RelativeLayout>
-
-
 </LinearLayout>

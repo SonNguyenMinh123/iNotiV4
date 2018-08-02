@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_home"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+        android:id="@+id/bgr_default_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+
+        android:background="@drawable/bg_set_default"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/set_default"
+        android:textAllCaps="true"
+        android:textColor="@color/bgr_1"
+        android:textSize="@dimen/_16sdp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+            android:id="@+id/txt_title_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0.8"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="@string/color"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_16sdp" />
+
+        <ImageView
+            android:id="@+id/img_activity_set_background__arrow_color"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:src="@drawable/arrow_up" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:id="@+id/ll_change_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_20sdp"
+        android:paddingTop="@dimen/_20sdp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingLeft="@dimen/activity_horizontal_margin">
+
+            <RelativeLayout
+                android:id="@+id/rl_red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_3sdp">
+
+                <TextView
+                    android:id="@+id/redToolTip"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="0"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_10sdp" />
+
+                <SeekBar
+                    android:id="@+id/redSeekBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/redToolTip"
+                    android:max="255"
+                    android:maxHeight="3dip"
+                    android:minHeight="3dip"
+                    android:progressDrawable="@drawable/red_progress"
+                    android:thumbTint="@color/red" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_greenSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_red"
+                android:paddingBottom="@dimen/_3sdp">
+
+                <TextView
+                    android:id="@+id/greenToolTip"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_10sdp" />
+
+                <SeekBar
+                    android:id="@+id/greenSeekBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/greenToolTip"
+                    android:max="255"
+                    android:maxHeight="3dip"
+                    android:minHeight="3dip"
+                    android:progressDrawable="@drawable/green_progress"
+                    android:thumbTint="@color/green" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_greenSeekBar">
+
+                <TextView
+                    android:id="@+id/blueToolTip"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_10sdp" />
+
+                <SeekBar
+                    android:id="@+id/blueSeekBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/blueToolTip"
+                    android:max="255"
+                    android:maxHeight="3dip"
+                    android:minHeight="3dip"
+                    android:progressDrawable="@drawable/blue_progress"
+                    android:thumbTint="@color/blue" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/colorView"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:elevation="2dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/line" />
+
+    <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+        android:id="@+id/txt_title_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:text="@string/images"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_16sdp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/line" />
+</LinearLayout>

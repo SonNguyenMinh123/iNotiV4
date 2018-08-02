@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e1f6ff"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/ll_header"
+        layout="@layout/header_setting_background" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_header"
+        android:background="@color/white">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <com.notification.notyos10.customviews.widgets.RippleOSButton
+        android:id="@+id/btn_get_background_from_gallery"
+        android:layout_width="@dimen/_101sdp"
+        android:layout_height="@dimen/_41sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:background="@drawable/bg_button_os"
+        android:paddingLeft="@dimen/_9sdp"
+        android:paddingRight="@dimen/_9sdp"
+        android:text="@string/your_photo"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black" />
+</RelativeLayout>

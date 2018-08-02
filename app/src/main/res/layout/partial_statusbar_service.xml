@@ -1,31 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:attrs="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_partial_notify__background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.9"
+            android:scaleType="centerCrop" />
+
+        <com.qiushui.blurredview.BlurredView
+            android:id="@+id/blur_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:move="true" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rll_partial_statusbar_service__statusbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_21sdp"
-        android:background="@color/black">
+        android:background="#e6912f">
 
-        <com.notification.inotythemehhhhh.customviews.others.PartialSignalView
+        <com.notification.notyos10.customviews.others.PartialSignalView
             android:id="@+id/sgv_partial_statusbar_service__signal_strength"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/_4sdp"
-            />
+            android:padding="@dimen/_4sdp" />
 
         <TextView
             android:id="@+id/txv_partial_statusbar_service__carrier_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:textSize="@dimen/_9sdp"
-            android:text=""
             android:layout_toRightOf="@+id/sgv_partial_statusbar_service__signal_strength"
-            android:textColor="@android:color/background_light" />
+            android:text=""
+            android:textColor="@android:color/background_light"
+            android:textSize="@dimen/_9sdp" />
 
         <ImageView
             android:id="@+id/imv_partial_statusbar_service__wifi"
@@ -33,8 +52,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/txv_partial_statusbar_service__carrier_name"
-            android:src="@drawable/ic_wifi_3"
-            android:padding="@dimen/_2sdp"/>
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_wifi_3" />
 
         <TextView
             android:id="@+id/txv_partial_statusbar_service__network_name"
@@ -43,10 +62,10 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/txv_partial_statusbar_service__carrier_name"
+            android:padding="@dimen/_4sdp"
             android:text="3G"
             android:textColor="@android:color/background_light"
-            android:textSize="@dimen/_11sdp"
-            android:padding="@dimen/_2sdp"/>
+            android:textSize="@dimen/_9sdp" />
 
         <TextView
             android:id="@+id/txv_partial_statusbar_service__current_time"
@@ -54,9 +73,10 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:gravity="center"
             android:text="3:16 PM"
-            android:textSize="@dimen/_13sdp"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="@dimen/_12sdp" />
 
         <ImageView
             android:id="@+id/imv_partial_statusbar_service__bluetooth"
@@ -64,7 +84,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/txv_partial_statusbar_service__percent_battery"
-            android:padding="@dimen/_3sdp"
+            android:padding="@dimen/_4sdp"
+            android:visibility="gone"
             android:src="@drawable/ic_bluetooth_off" />
 
         <TextView
@@ -95,24 +116,16 @@
             android:src="@drawable/ic_charging_storm" />
     </RelativeLayout>
 
-
-    <com.notification.inotythemehhhhh.customviews.swipedown.ToolbarPanelLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.notification.notyos10.customviews.swipedown.ToolbarPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/sliding_down_toolbar_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:panelId="@+id/panel"
-        app:pullableToolbarId="@+id/rll_partial_statusbar_service__toolbar">
-
-
-        <!--<RelativeLayout-->
-            <!--android:id="@+id/content_container"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-
-        <!--</RelativeLayout>-->
-
+        app:pullableToolbarId="@+id/rll_partial_statusbar_service__toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <RelativeLayout
             android:id="@+id/rll_partial_statusbar_service__toolbar"
@@ -139,61 +152,57 @@
                 android:layout_width="match_parent"
                 android:layout_height="22dp" />
 
-            <!-- <notifyhysiclayout.PhysicsRelativeLayout
-                 android:layout_width="match_parent"
-                 app:boundsSize="300dp"
-                 android:layout_height="match_parent">-->
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/img_partial_notify__background"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:alpha="0.9"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/bg" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:background="#70000000">
+                    android:background="#70000000"
+                    android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/ll_search"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_50sdp"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
                         <include
                             layout="@layout/search_box"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
-
                     </LinearLayout>
-
-                    <!--<View-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="2px"-->
-                    <!--android:background="@color/line" />-->
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1">
 
-                        <android.support.v4.view.ViewPager
+                        <com.notification.notyos10.customviews.MyViewPager
                             android:id="@+id/vpg_partial_statusbar__service"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
+                            android:layout_height="match_parent"
+                            android:paddingTop="@dimen/_10sdp"></com.notification.notyos10.customviews.MyViewPager>
+
+                        <com.rd.PageIndicatorView
+                            android:id="@+id/pageIndicatorView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            attrs:piv_animationType="thinWorm"
+                            attrs:piv_viewPager="@id/vpg_partial_statusbar__service" />
 
                         <RelativeLayout
-                            android:id="@+id/search"
+                            android:id="@+id/rl_search_result"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#B64F4D4D">
+                            android:layout_marginTop="@dimen/_8sdp"
+
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_8sdp">
 
                             <android.support.v7.widget.RecyclerView
                                 android:id="@+id/recyclerView"
@@ -201,7 +210,6 @@
                                 android:layout_height="match_parent">
 
                             </android.support.v7.widget.RecyclerView>
-
                         </RelativeLayout>
 
                     </RelativeLayout>
@@ -213,78 +221,20 @@
                         android:layout_height="2px"
                         android:background="@color/line" />
 
-                    <LinearLayout
-                        android:id="@+id/lnl_partial_today__menu_setting"
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vpg_statusbar_service__menu_setting"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <ImageButton
-                            android:id="@+id/btn_partial_statusbar_service__wifi"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/bg_selected_wifi"
-                            android:text="Wifi" />
-
-                        <ImageButton
-                            android:id="@+id/btn_partial_statusbar_service__mobile_data"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/bg_selected_mobile_data"
-                            android:text="Mobile Data" />
-
-                        <ImageButton
-                            android:id="@+id/btn_partial_statusbar_service__bluetooth"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/bg_selected_bluetooth"
-                            android:text="Bluetooth" />
-
-                        <ImageButton
-                            android:id="@+id/btn_partial_statusbar_service__mute"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/bg_selected_mute"
-                            android:text="Sleep" />
-
-                        <ImageButton
-                            android:id="@+id/btn_partial_statusbar_service__flasht_light"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/bg_selected_flash_light"
-                            android:text="Flash Light" />
-
-                        <ImageButton
-                            android:id="@+id/btn_partial_statusbar_service__auto_rotate"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@android:color/transparent"
-                            android:src="@drawable/bg_selected_rotate"
-                            android:text="Auto Rotate" />
-                    </LinearLayout>
+                        android:layout_height="@dimen/_65sdp"
+                        android:background="@android:color/transparent" />
 
                     <View
                         android:id="@+id/view_partial_today__line_toolbar"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_21sdp"
-                        android:background="@color/line"/>
+                        android:background="@color/line" />
 
                 </LinearLayout>
             </RelativeLayout>
-            <!--</notifyhysiclayout.PhysicsRelativeLayout>-->
         </LinearLayout>
-    </com.notification.inotythemehhhhh.customviews.swipedown.ToolbarPanelLayout>
-
+    </com.notification.notyos10.customviews.swipedown.ToolbarPanelLayout>
 </RelativeLayout>

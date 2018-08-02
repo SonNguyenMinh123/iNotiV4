@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:shSwitch="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/titlename">
+
+        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10.0dip"
+            android:text="Weather"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20.0dip"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rll_activity_weather"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_pressed_color_item_main"
+        android:paddingTop="5.0dip">
+
+        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+            android:id="@+id/txv_activity_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:paddingBottom="11dp"
+            android:paddingTop="11dp"
+            android:text="Enble Weather"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+        <com.sevenheaven.iosswitch.ShSwitchView
+            android:id="@+id/swc_activity_weather"
+            android:layout_width="62dip"
+            android:layout_height="41dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            shSwitch:shadowSpace="7dip"
+            shSwitch:tintColor="@color/onclor"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.05dip"
+            android:layout_alignLeft="@+id/txv_activity_weather"
+            android:layout_alignParentBottom="true"
+            
+            android:background="@color/line" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rll_activity_weather_location"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_pressed_color_item_main"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/lnl_activity_weather_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                android:id="@+id/txv_activity_weather_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Location"
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                android:id="@+id/txv_activity_weather_location2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txv_activity_weather_location"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="3dp"
+                android:text="N/a"
+                android:textColor="#828282"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_chevron_right" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.05dip"
+            android:layout_alignLeft="@+id/lnl_activity_weather_location"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rll_activity_weather_temp"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_pressed_color_item_main"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/lnl_activity_weather_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                android:id="@+id/txv_activity_weather_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature scale"
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                android:id="@+id/txv_activity_weather_temp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txv_activity_weather_temp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="3dp"
+                android:text="Fahrenheit (°F)"
+                android:textColor="#828282"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_chevron_right" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.05dip"
+            android:layout_alignLeft="@+id/lnl_activity_weather_temp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line" />
+    </RelativeLayout>
+</LinearLayout>

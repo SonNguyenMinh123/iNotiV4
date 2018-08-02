@@ -6,7 +6,7 @@
     android:background="@drawable/bg_pressed_color_item_main"
     android:paddingTop="5.0dip">
 
-    <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSNormal
+    <com.notification.notyos10.customviews.widgets.TextViewOSNormal
         android:id="@+id/txv_partial_checkbox__title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +16,6 @@
         android:paddingTop="11dp"
         android:textColor="#000000"
         android:textSize="17sp"/>
-
 
     <ImageView
         android:id="@+id/imv_partial_checkbox__checked"

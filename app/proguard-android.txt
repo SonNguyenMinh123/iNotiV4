@@ -31,12 +31,10 @@
    void set*(***);
    *** get*();
 }
-
 # We want to keep methods in Activity that could be used in the XML attribute onClick
 -keepclassmembers class * extends android.app.Activity {
    public void *(android.view.View);
 }
-
 # For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
 -keepclassmembers enum * {
     public static **[] values();
@@ -116,6 +114,21 @@
 -dontwarn org.w3c.**
 -dontwarn com.firebase.**
 -dontwarn com.fasterxml.jackson.**
+-dontwarn sun.misc.**
+-dontwarn dagger.internal.codegen.**
+-dontwarn butterknife.internal.**
+-dontwarn com.google.android.exoplayer.**
+-dontwarn com.flurry.**
+-dontwarn com.inmobi.**
+-dontwarn com.facebook.ads.**
+-dontwarn com.android.volley.**
+-dontwarn android.webkit.**
+-dontwarn com.test.sdk.**
+-dontwarn com.w
+-dontwarn groovy.lang.**
+-dontwarn org.gradle.**
+-dontwarn com.google.common.**
+-dontwarn com.google.gms.**
 
 -keep public class * extends android.app.Application
 -keep class javax.lang.** { *; }
@@ -140,13 +153,44 @@
 -keep interface android.app.** { *; }
 -keep class org.apache.** { *; }
 -keep class org.ietf.** { *; }
-
+-keep class android.webkit.** {*;}
 -keep class org.w3c.** { *; }
 -keep class com.firebase.** { *; }
 -keep interface com.fasterxml.jackson.** {*; }
 -keep class com.fasterxml.jackson.** { *; }
+-keep class com.android.volley.** {*;}
+-keep class com.test.sdk.**
+-keep class com.wang.avi.** { *; }
+-keep class com.wang.avi.indicators.** { *; }
+-keep class com.w {*;}
+-keep class groovy.lang.** {*;}
+-keep class org.gradle.** {*;}
+-keep class com.google.common.** {*;}
+-keep class com.google.gms.** {*;}
 
 # keep my object if use json
--keep class com.notification.inotythemehhhhh.objects.** {*;}
+-keep class com.dialercontact.videocallerss.entitis.** {*;}
+-keep class sun.misc.** {*;}
+-keep class dagger.internal.codegen.** {*;}
+-keep class butterknife.internal.** {*;}
+-keep class entity.** {*;}
+-keepattributes *Annotation*
+-keepclassmembers class ** {
+    @org.greenrobot.eventbus.Subscribe <methods>;
+}
+-keep enum org.greenrobot.eventbus.ThreadMode { *; }
+
+# Only required if you use AsyncExecutor
+-keepclassmembers class * extends org.greenrobot.eventbus.util.ThrowableFailureEvent {
+    <init>(java.lang.Throwable);
+}
+
+-keep class com.flurry.** {*;}
+-keep class com.inmobi.** {*;}
+-keep class com.facebook.ads.** {*;}
+-keep class com.google.android.exoplayer.** {*;}
+
+-keep class com.wang.avi.**
+-keep class com.notification.notyos10.objects.** {*;}
 
 

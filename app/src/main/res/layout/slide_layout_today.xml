@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.notification.notyos10.customviews.slide.ToDayLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_20sdp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_91sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right" />
+
+                <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                    android:id="@+id/txv_infor_date"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Today"
+                    android:textSize="@dimen/_21sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/background_round"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_31sdp"
+                    android:background="@drawable/bg_round_header">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_6sdp"
+                        android:src="@drawable/ic_small_calendar" />
+
+                    <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                        android:id="@+id/txv_partial_today_continue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="41dp"
+                        android:text="@string/eventContinue"
+                        android:textColor="@android:color/background_light" />
+                </RelativeLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp">
+                    <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                        android:id="@+id/txv_partial_today__no_event_continue"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:text="No have events continues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:id="@+id/ll_partial_today_infor_event_continue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.notification.notyos10.customviews.widgets.TextViewOSBold
+                            android:id="@+id/txv_partial_today__event_next_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black" />
+
+                        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                            android:id="@+id/txv_partial_today__event_next_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black" />
+
+                        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                            android:id="@+id/txv_partial_today__event_next_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_partial_today__weather_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/background_round"
+                android:paddingBottom="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/bg_round_header">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_weather" />
+
+                    <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                        android:id="@+id/txv_partial_today_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:text="@string/str_label_weather"
+                        android:textColor="@android:color/background_light" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/imv_partial_today_weather_icon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_clock_timer" />
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                            android:id="@+id/txv_partial_today_place_weather"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:textColor="@android:color/black"
+                            android:text="Place" />
+
+                        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                            android:id="@+id/txv_partial_today_weather_des"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="Des" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                            android:id="@+id/txv_partial_today_weather_template"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tem"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_20sdp"/>
+
+                        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                            android:id="@+id/txv_partial_today_weather_humility"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="Humidity : " />
+
+                        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+                            android:id="@+id/txv_partial_today_weather_precip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="Precip : " />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lnl_partial_today__list_noty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_round"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</com.notification.notyos10.customviews.slide.ToDayLayout>

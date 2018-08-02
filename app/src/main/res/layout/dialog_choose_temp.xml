@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/background_light"
+    android:padding="20.0dip">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@+id/lout_Header"
+        android:layout_marginBottom="15.0dip"
+        android:layout_marginTop="5.0dip"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:id="@+id/lout_Header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Choose temperature type"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#ff272727" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lout_Header"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center">
+
+
+        <com.notification.notyos10.customviews.widgets.RadioButtonIos
+            android:id="@+id/rdb_dialog_temp_f"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/temp_f"
+            android:textColor="#ff0a0906" />
+
+
+        <com.notification.notyos10.customviews.widgets.RadioButtonIos
+            android:id="@+id/rdb_dialog_temp_c"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/temp_c"
+            android:textColor="#ff0a0906" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@id/radioGroup1"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginTop="15.0dip"
+        android:background="@color/line" />
+
+    <com.notification.notyos10.customviews.widgets.ButtonIos
+        android:id="@+id/btn_dialog_temp_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/view2"
+        android:layout_alignRight="@id/view2"
+        android:layout_below="@id/view2"
+        android:text="@string/w_cancel" />
+</RelativeLayout>

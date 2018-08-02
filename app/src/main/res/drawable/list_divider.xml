@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/_3sdp"
+        android:right="@dimen/_3sdp"
+        android:drawable="@drawable/list_divider_inner" />
+
+</layer-list>

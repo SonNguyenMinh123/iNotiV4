@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Theme.Transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog_rectangle_corners"
+    android:orientation="vertical">
+
+    <com.notification.notyos10.customviews.widgets.TextViewOSNormal
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/custom_name"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edt_dialog_custom_carrier_name__input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="40"
+        android:maxLength="15"
+        android:textColor="@android:color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingBottom="5dp">
+
+        <com.notification.notyos10.customviews.widgets.ButtonOSNormal
+            android:id="@+id/btn_dialog_custom_carrier_name__ok"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:text="@string/w_ok"
+            android:textColor="@drawable/bg_pressed_color_button2" />
+
+        <com.notification.notyos10.customviews.widgets.ButtonOSNormal
+            android:id="@+id/btn_dialog_custom_carrier_name__cancel"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_dialog_custom_carrier_name__ok"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:text="@string/w_cancel"
+            android:textColor="@drawable/bg_pressed_color_button2" />
+
+        <com.notification.notyos10.customviews.widgets.ButtonOSNormal
+            android:id="@+id/btn_dialog_custom_carrier_name__default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/default_"
+            android:textColor="@drawable/bg_pressed_color_button"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</LinearLayout>

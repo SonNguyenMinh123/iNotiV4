@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:weightSum="5"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingRight="@dimen/_10sdp"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+   <ImageButton
+       android:id="@+id/btn_pager_firsr_menu_setting__setting_more"
+       android:background="@android:color/transparent"
+       android:src="@drawable/button_settings"
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:layout_height="wrap_content" />
+   <ImageButton
+       android:id="@+id/btn_pager_firsr_menu_setting__setting_wifi"
+       android:background="@android:color/transparent"
+       android:src="@drawable/ic_wifi"
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:layout_height="wrap_content" />
+   <ImageButton
+       android:id="@+id/btn_pager_firsr_menu_setting__data_mobile"
+       android:background="@android:color/transparent"
+       android:src="@drawable/ic_data"
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:layout_height="wrap_content" />
+   <ImageButton
+       android:id="@+id/btn_pager_firsr_menu_setting__ringtone"
+       android:background="@android:color/transparent"
+       android:src="@drawable/ic_ringtone"
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:layout_height="wrap_content" />
+   <ImageButton
+       android:id="@+id/btn_pager_firsr_menu_setting__flash"
+       android:background="@android:color/transparent"
+       android:src="@drawable/ic_flashlight"
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:layout_height="wrap_content" />
+
+</LinearLayout>
