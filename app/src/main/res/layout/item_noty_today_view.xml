@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnl_item_noty_today_view__add_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/color_header">
+
+        <ImageView
+            android:id="@+id/imv_item_noty_today_view__icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/view_item_noty_today_view"
+            android:padding="5dp"
+            android:src="@drawable/ic_small_calendar" />
+
+        <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSNormal
+            android:id="@+id/txv_item_noty_today_view__title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:text=""
+            android:textColor="@android:color/background_light" />
+
+        <View
+            android:id="@+id/view_item_noty_today_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txv_item_noty_today_view__title" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:shSwitch="http://schemas.android.com/tools"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rll_dialog_choose_location__current"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_pressed_listitem"
+        android:paddingTop="5.0dip">
+
+        <TextView
+            android:id="@+id/txv_dialog_choose_location__current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:paddingBottom="11dp"
+            android:paddingTop="11dp"
+            android:text="Use current location"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/swc_dialog_choose_location__currrent"
+            android:layout_width="66dip"
+            android:layout_height="44dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:checked="true"
+            android:padding="5dp"
+            shSwitch:shadowSpace="7dip"
+            shSwitch:tintColor="#ff62cc2f"  />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edt_dialog_choose_location_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:hint="Please enter a city"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:padding="10dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txv_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No item" />
+
+        <ListView
+            android:id="@+id/ltv_dialog_choose_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            android:scrollbars="vertical" />
+
+    </FrameLayout>
+
+</LinearLayout>

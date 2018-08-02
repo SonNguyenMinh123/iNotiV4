@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_pressed_color_item_main"
+    android:paddingTop="5.0dip">
+
+    <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSNormal
+        android:id="@+id/txv_partial_checkbox__title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10.0dip"
+        android:paddingBottom="11dp"
+        android:paddingTop="11dp"
+        android:textColor="#000000"
+        android:textSize="17sp"/>
+
+
+    <ImageView
+        android:id="@+id/imv_partial_checkbox__checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:src="@drawable/ic_checked"/>
+</RelativeLayout>

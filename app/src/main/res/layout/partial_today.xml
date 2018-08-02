@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.notification.inotythemehhhhh.customviews.partial.ToDayPartial xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/weather"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/_210sdp">-->
+
+            <!--</LinearLayout>-->
+
+
+            <!--<ios10notificationotification.customviews.widgets.TextViewOSNormal-->
+            <!--android:id="@+id/txv_partial_today__date"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="Thứ 4,\n 27 tháng 1"-->
+            <!--android:textSize="40sp" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/color_header">
+
+                    <ImageView
+                        android:id="@+id/imv_partial_today__small_calendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/view_partial_today__calendar"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_small_calendar" />
+
+                    <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSNormal
+                        android:id="@+id/txv_partial_today__smal_calendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:text="Calendar"
+                        android:textColor="@android:color/background_light" />
+
+                    <View
+                        android:id="@+id/view_partial_today__calendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txv_partial_today__smal_calendar" />
+                </RelativeLayout>
+
+                <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSNormal
+                    android:id="@+id/txv_partial_today__event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pressed_color_item_calendar"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/str_noevent_today"
+                    android:textColor="@color/color_text_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/color_header">
+
+
+                    <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSNormal
+                        android:id="@+id/txv_partial_today__tomorow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:text="Tomorows"
+                        android:textColor="@android:color/background_light" />
+                </RelativeLayout>
+
+                <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSNormal
+                    android:id="@+id/txv_partial_today__event_tomorow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pressed_color_item_calendar"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/str_noevent_tomorrow"
+                    android:textColor="@android:color/background_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnl_partial_today__list_noty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</com.notification.inotythemehhhhh.customviews.partial.ToDayPartial>

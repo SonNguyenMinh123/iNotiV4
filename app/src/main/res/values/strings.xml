@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">iNoty – Notify Style OS 10</string>
+    <string name="open_panel">Open The Panel</string>
+    <string name="close_panel">Close The Panel</string>
+    <string name="format_24h">24 Hours Format</string>
+    <string name="format_12h">12 Hours Format</string>
+    <string name="str_noevent_tomorrow">You have no events scheduled for tomorrow</string>
+    <string name="str_noevent_today">No Events</string>
+    <string name="appid">inotyos9v3</string>
+    <string name="settings_menu_name">Item4</string>
+</resources>

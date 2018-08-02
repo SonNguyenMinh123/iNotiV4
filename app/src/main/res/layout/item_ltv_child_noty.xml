@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSBold
+        android:id="@+id/txv_item_ltv_child_noty__app_name"
+        android:text="iNoty"
+        android:layout_marginLeft="40dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSNormal
+        android:id="@+id/txv_item_ltv_child_noty__content"
+        android:text="abc xyz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_toLeftOf="@+id/imv_item_ltv_child_noty__clear"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/txv_item_ltv_child_noty__app_name"/>
+
+    <com.notification.inotythemehhhhh.customviews.widgets.TextViewOSLight
+        android:id="@+id/txv_item_ltv_child_noty__time_ago"
+        android:text="time ago"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/txv_item_ltv_child_noty__app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/imv_item_ltv_child_noty__clear"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/bg_pressed_clear"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

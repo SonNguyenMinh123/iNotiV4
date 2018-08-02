@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/scroll_home"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#E1F5FE"
+              android:orientation="vertical">
+
+    <in.srain.cube.views.GridViewWithHeaderAndFooter
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/_5sdp"
+        android:numColumns="2"
+        android:verticalSpacing="@dimen/_5sdp"
+        android:id="@+id/gridview"
+        />
+</LinearLayout>
+    <!--<com.notification.inotythemehhhhh.customviews.ExpandableHeightGridView-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/gridview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/_60sdp"-->
+    <!--android:background="#60000000"-->
+    <!--android:gravity="center"-->
+    <!--android:horizontalSpacing="@dimen/_5sdp"-->
+    <!--android:numColumns="2"-->
+    <!--android:padding="@dimen/_10sdp"-->
+    <!--android:verticalSpacing="@dimen/_5sdp"-->
+    <!--/>-->

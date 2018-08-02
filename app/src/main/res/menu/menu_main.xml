@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/black"
+        android:title="Black"
+        />
+    <item
+        android:id="@+id/blue"
+        android:title="Blue"
+        />
+    <item
+        android:id="@+id/red"
+        android:title="Red"
+        />
+    <item
+        android:id="@+id/Purple"
+        android:title="Purple"/>
+    <item
+        android:id="@+id/orange"
+        android:title="Orange"
+        />
+</menu>
